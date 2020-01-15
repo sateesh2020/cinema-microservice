@@ -27,6 +27,7 @@ module.exports = (app, options) => {
         }
         repo.getCinemaScheduleByMovie(options)
             .then(schedules => {
+                console.log(schedules)
                 res.status(status.OK).send(schedules)
             })
             .catch(next)

@@ -18,7 +18,8 @@ const connect = (options, mediator) => {
             if (err) {
                 mediator.emit('db.error', err)
             }
-            const db = client.db(options.db)
+            let db = client.db(options.db)
+            db.close = client.close
             db.admin().listDatabases((err, result) => {
                 if (err) {
                     mediator.emit('db.error', err)

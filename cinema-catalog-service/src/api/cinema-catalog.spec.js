@@ -109,6 +109,7 @@ describe('Testing Cinemas API', () => {
         request(app)
             .get('/cinemas/588ac3a02d029a6d15d0b5c4')
             .expect((res) => {
+                console.log(res.body)
                 res.body.should.containEql(testCinemaId)
             })
             .expect(200, done)
