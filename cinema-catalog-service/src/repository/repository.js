@@ -3,7 +3,7 @@ var ObjectId = require('mongodb').ObjectID;
 
 const repository = (connection) => {
     const { db, ObjectID } = connection
-
+    const collection = db.collection('movies')
     const getCinemasByCity = (cityId) => {
         return new Promise((resolve, reject) => {
             const cinemas = []
@@ -11,7 +11,7 @@ const repository = (connection) => {
             let options = {
                 projection: { _id: 1, name: 1 }
             }
-            const cursor = db.collection('movies').find(query, options)
+            const cursor = collection.find(query, options)
             const addCinema = (cinema) => {
                 cinemas.push(cinema)
             }
@@ -37,7 +37,7 @@ const repository = (connection) => {
                 }
                 resolve(cinema)
             }
-            db.collection('movies').findOne(query, options, response)
+            collection.findOne(query, options, response)
         })
     }
 
@@ -82,7 +82,7 @@ const repository = (connection) => {
                     }
                 }
             }]
-            let cursor = db.collection('movies').aggregate([match, project, ...unwind, ...group])
+            let cursor = collection.aggregate([match, project, ...unwind, ...group])
             const addSchedule = (schedule) => {
                 schedules.push(schedule)
             }
