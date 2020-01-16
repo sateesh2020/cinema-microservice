@@ -1,0 +1,12 @@
+[
+    {
+        "_id": {
+            "$oid": "588ab9d92d029a6d15d0b5b7"
+        },
+        "name": "India",
+        "states": [
+            "588aba4d2d029a6d15d0b5ba",
+            "588aba4d2d029a6d15d0b5bb"
+        ]
+    }
+]

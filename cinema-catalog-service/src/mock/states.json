@@ -1,0 +1,22 @@
+[
+    {
+        "_id": {
+            "$oid": "588aba4d2d029a6d15d0b5ba"
+        },
+        "name": "Andhra Pradesh",
+        "country_id": "588ab9d92d029a6d15d0b5b7",
+        "cities": [
+            "588ababf2d029a6d15d0b5bf"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "588aba4d2d029a6d15d0b5bb"
+        },
+        "name": "Telangana",
+        "country_id": "588ab9d92d029a6d15d0b5b7",
+        "cities": [
+            "588ababf2d029a6d15d0b5c0"
+        ]
+    }
+]

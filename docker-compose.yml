@@ -1,0 +1,10 @@
+version: "3"
+services:
+  theatre-catalog:
+    build: './theatre-catalog-service'
+    hostname: theatre-catalog
+    container_name: theatre-catalog-service
+    expose:
+        - 3000
+    ports:
+        - 3001:3000

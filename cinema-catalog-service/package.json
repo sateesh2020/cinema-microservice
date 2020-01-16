@@ -1,0 +1,40 @@
+{
+  "name": "movie-catalog-service",
+  "version": "1.0.0",
+  "description": "Provides service to get details about movies",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha -R spec src/**/*.spec.js",
+    "start": "node src/index.js",
+    "lint": "standard --verbose | snazzy",
+    "node-debug": "DEBUG=express* node src/index.js",
+    "chrome-debug": "node --debug-brk --inspect src/index.js",
+    "coverage": "istanbul cover _mocha $(find ./src -name \"*.spec.js\" -not -path \"./node_modules/*\") ",
+    "metric": "nodejs-dashboard -- node -r nodejs-dashboard src/index.js"
+  },
+  "keywords": [
+    "Movies",
+    "microservice",
+    "node",
+    "mongodb"
+  ],
+  "author": "Satheesh Valluru",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "http-status": "^1.4.2",
+    "mongodb": "^3.5.0",
+    "morgan": "^1.9.1",
+    "spdy": "^4.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "mocha": "^7.0.0",
+    "nodejs-dashboard": "^0.5.1",
+    "should": "^13.2.3",
+    "snazzy": "^8.0.0",
+    "standard": "^14.3.1",
+    "supertest": "^4.0.2"
+  }
+}
