@@ -9,7 +9,7 @@ const repository = (connection) => {
             const cinemas = []
             let query = { city_id: cityId }
             let options = {
-                projection: { name: 1 }
+                projection: { _id: 1, name: 1 }
             }
             const cursor = db.collection('movies').find(query, options)
             const addCinema = (cinema) => {
@@ -29,7 +29,7 @@ const repository = (connection) => {
         return new Promise((resolve, reject) => {
             let query = { _id: new ObjectId(movieId) }
             let options = {
-                projection: { name: 1, cinemaPremieres: 1 }
+                projection: { _id: 1, name: 1, cinemaPremieres: 1 }
             }
             let response = (err, cinema) => {
                 if (err) {
@@ -53,6 +53,7 @@ const repository = (connection) => {
 
             const project = {
                 $project: {
+                    '_id': 1,
                     'name': 1,
                     'cinemaRooms.schedules.time': 1,
                     'cinemaRooms.name': 1,

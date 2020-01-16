@@ -41,7 +41,8 @@ describe('Testing Cinemas API', () => {
     }
 
     const testSchedulesCinema = [{
-        '_id': 'Plaza Morelia',
+        '_id': "588ac3a02d029a6d15d0b5c4",
+        'name': 'Plaza Morelia',
         'schedules': [{
             'room': 2.0,
             'schedules': ['10:15']
@@ -53,7 +54,8 @@ describe('Testing Cinemas API', () => {
             'schedules': ['10:15']
         }]
     }, {
-        '_id': 'Las Americas',
+        '_id': "588ac3a02d029a6d15d0b5c5",
+        'name': 'Las Americas',
         'schedules': [{
             'room': 2.0,
             'schedules': ['3:25', '10:15']
