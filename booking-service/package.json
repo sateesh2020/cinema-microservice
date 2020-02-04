@@ -1,0 +1,55 @@
+{
+  "name": "booking-service",
+  "version": "1.0.0",
+  "description": "Movie booking service",
+  "main": "src/index.js",
+  "standard": {
+    "env": [
+      "mocha"
+    ],
+    "ignore": [
+      "mock"
+    ]
+  },
+  "scripts": {
+    "test": "mocha -R spec src/**/*.spec.js",
+    "start": "node src/index.js",
+    "lint": "standard --verbose | snazzy",
+    "node-debug": "DEBUG=express* node src/index.js",
+    "chrome-debug": "node --debug-brk --inspect src/index.js"
+  },
+  "keywords": [
+    "movies",
+    "nodejs",
+    "mongodb",
+    "microservice",
+    "booking"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sateesh2020/cinema-microservice.git"
+  },
+  "author": "Satheesh Valluru",
+  "license": "ISC",
+  "dependencies": {
+    "awilix": "^4.2.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "http-status": "^1.4.2",
+    "joi": "^14.3.1",
+    "mongodb": "^3.5.0",
+    "morgan": "^1.9.1",
+    "spdy": "^4.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "mocha": "^7.0.0",
+    "should": "^13.2.3",
+    "snazzy": "^8.0.0",
+    "standard": "^14.3.1",
+    "supertest": "^4.0.2",
+    "nodejs-dashboard": "^0.5.1"
+  }
+}

@@ -23,8 +23,12 @@ const start = (options) => {
 
         api(app, options)
 
-        const server = app.listen(options.port, () => resolve(server))
-        //const server = spdy.createServer(options.ssl, app).listen(options.port, () => resolve(server))
+        if (process.env.NODE === 'test') {
+            const server = app.listen(port, () => resolve(server))
+        } else {
+            const server = spdy.createServer(ssl, app)
+                .listen(port, () => resolve(server))
+        }
     })
 }
 
